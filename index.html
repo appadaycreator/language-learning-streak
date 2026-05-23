@@ -105,7 +105,7 @@
           margin-bottom: 10px;
         }
     </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"このサービスは無料ですか？","acceptedAnswer":{"@type":"Answer","text":"はい、完全無料・登録不要でご利用いただけます。"}},{"@type":"Question","name":"入力データはどこに保存されますか？","acceptedAnswer":{"@type":"Answer","text":"お使いのデバイス内にのみ保存されます。外部送信は行いません。"}},{"@type":"Question","name":"結果はどのくらい正確ですか？","acceptedAnswer":{"@type":"Answer","text":"あくまで参考情報です。重要な判断の際は専門家にご相談ください。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"このサービスは無料ですか？","acceptedAnswer":{"@type":"Answer","text":"はい、完全無料・登録不要でご利用いただけます。"}},{"@type":"Question","name":"入力データはどこに保存されますか？","acceptedAnswer":{"@type":"Answer","text":"お使いのデバイス内にのみ保存されます。外部送信は行いません。"}},{"@type":"Question","name":"結果はどのくらい正確ですか？","acceptedAnswer":{"@type":"Answer","text":"あくまで参考情報です。重要な判断の際は専門家にご相談ください。"}},{"@type":"Question","name":"どのような人が使っていますか？","acceptedAnswer":{"@type":"Answer","text":"初心者から専門家まで、多くの方にご利用いただいています。特に決断が必要な場面で活躍します。"}},{"@type":"Question","name":"結果をシェアできますか？","acceptedAnswer":{"@type":"Answer","text":"はい、診断結果はスクリーンショットやURLで友人・家族とシェアできます。"}},{"@type":"Question","name":"有料プランはありますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ、すべての機能を完全無料でご利用いただけます。"}}]}</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -164,7 +164,7 @@
 <meta name="twitter:image" content="https://appadaycreator.com/twitter-card.png">
 <meta name="twitter:site" content="@appadaycreator">
 </head>
-<body>
+<body><a href="#main" class="sr-only">本文へスキップ</a>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header class="site-header">
@@ -198,13 +198,13 @@
             </div>
             <div>
               <label style="font-size:13px;font-weight:600;color:#374151;">学習時間（分） <span style="color:#1D4ED8;">*</span></label>
-              <input type="number" id="studyMinutes" placeholder="例: 30" min="1" max="600">
+              <input type="number" id="studyMinutes" placeholder="例: 30" min="1" max="600" aria-label="例: 30">
             </div>
           </div>
           <label style="font-size:13px;font-weight:600;color:#374151;">学習内容</label>
-          <input type="text" id="studyContent" placeholder="例: 単語50個・リスニング練習・文法復習" style="margin-bottom:10px;">
+          <input type="text" id="studyContent" placeholder="例: 単語50個・リスニング練習・文法復習" style="margin-bottom:10px;" aria-label="例: 単語50個・リスニング練習・文法復習">
           <label style="font-size:13px;font-weight:600;color:#374151;">一言メモ</label>
-          <input type="text" id="studyNote" placeholder="例: 発音が難しかった・集中できた">
+          <input type="text" id="studyNote" placeholder="例: 発音が難しかった・集中できた" aria-label="例: 発音が難しかった・集中できた">
           <button class="btn" style="margin-top:16px;" onclick="generate()">学習を記録する</button>
         </div>
         <div class="result" id="result" style="margin-top:16px;">
