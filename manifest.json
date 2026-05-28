@@ -1,8 +1,9 @@
 {
   "name": "Language Learning Streak",
   "short_name": "language-lea",
-  "start_url": "/",
+  "start_url": "/language-learning-streak/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#6366f1"
+  "theme_color": "#6366f1",
+  "scope": "/language-learning-streak/"
 }
