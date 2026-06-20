@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Consent Mode v2 -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});(function(){try{var k='cookie-consent-v2',o='cookie-consent';var c=localStorage.getItem(k);if(!c&&localStorage.getItem(o)==='1')c='granted';if(c){var s=c==='granted'?'granted':'denied';gtag('consent','update',{'analytics_storage':s,'ad_storage':s,'ad_user_data':s,'ad_personalization':s});}}catch(e){}})();</script>
+<!-- End Consent Mode v2 -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,"script","dataLayer","GTM-TXQGZRF9");</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2563EB" />
+    <title>毎日の語学学習を無料で記録・ストリーク管理できるWebツール</title>
+    <meta name="description" content="語学学習の毎日の記録・ストリーク管理が無料でできるWebツール。28日カレンダー・自動計算・データエクスポート対応。英語・中国語・韓国語など複数言語対応">
+    <meta name="author" content="AppADayCreator">
+    <link rel="canonical" href="https://appadaycreator.com/language-learning-streak/lp/">
+    <meta property="og:title" content="毎日の語学学習を無料で記録・ストリーク管理できるWebツール">
+    <meta property="og:description" content="語学学習の毎日の記録・ストリーク管理が無料でできるWebツール。28日カレンダー・自動計算・データエクスポート対応。複数言語対応。">
+    <meta property="og:url" content="https://appadaycreator.com/language-learning-streak/lp/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://appadaycreator.com/language-learning-streak/ogp.png">
+    <meta property="og:site_name" content="appadaycreator" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"語学学習ストリーク記録","description":"毎日の語学学習を無料で記録・ストリーク管理できるWebツール。","url":"https://appadaycreator.com/language-learning-streak/","applicationCategory":"UtilityApplication","operatingSystem":"Any","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"author":{"@type":"Organization","name":"AppADayCreator","url":"https://appadaycreator.com/"}}</script>
+    <style>
+      *{margin:0;padding:0;box-sizing:border-box}
+      :root{--primary:#2563EB;--primary-d:#1D4ED8;--accent:#10B981;--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--bg:#f8fafc;--soft:#eff6ff}
+      html{scroll-behavior:smooth}
+      body{font-family:'Inter','Noto Sans JP',sans-serif;color:var(--ink);background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased}
+      img{max-width:100%;display:block}
+      a{text-decoration:none;color:inherit}
+      .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+      .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border:none;border-radius:12px;cursor:pointer;transition:transform .12s,box-shadow .2s,opacity .2s;font-family:inherit}
+      .btn-primary{background:var(--primary);color:#fff;padding:15px 30px;font-size:16px;box-shadow:0 8px 20px rgba(37,99,235,.28)}
+      .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(37,99,235,.36)}
+      .btn-accent{background:var(--accent);color:#fff;padding:15px 30px;font-size:16px;box-shadow:0 8px 20px rgba(16,185,129,.28)}
+      .btn-ghost{background:#fff;color:var(--primary);padding:14px 26px;font-size:15px;border:1.5px solid #bfdbfe}
+      .btn-ghost:hover{background:var(--soft)}
+      /* nav */
+      .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+      .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+      .brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:17px;color:var(--primary-d)}
+      .brand .fire{font-size:22px}
+      .nav-links{display:flex;gap:26px;font-size:14px;font-weight:600;color:#475569}
+      .nav-links a:hover{color:var(--primary)}
+      .nav .btn-primary{padding:10px 20px;font-size:14px;border-radius:10px;box-shadow:none}
+      /* hero */
+      .hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#eef4ff 0%,#e8f7f1 100%)}
+      .hero-photo{position:absolute;inset:0;background-image:url('../assets/photos/photo_01.jpg');background-size:cover;background-position:center;opacity:.16}
+      .hero-in{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:64px 0 72px}
+      .hero h1{font-size:42px;line-height:1.28;font-weight:800;letter-spacing:-.01em}
+      .hero h1 .b{color:var(--primary)}
+      .hero h1 .g{color:var(--accent)}
+      .hero p.lead{margin:20px 0 28px;font-size:16px;color:#475569;max-width:520px}
+      .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+      .trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:26px}
+      .trust span{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:#475569}
+      .trust img{width:18px;height:18px}
+      /* hero card */
+      .hcard{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 60px rgba(15,23,42,.12);padding:18px}
+      .hcard-top{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}
+      .mini-form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+      .mini-form .ttl{font-size:13px;font-weight:700;color:#334155;margin-bottom:10px}
+      .mf-label{font-size:11px;font-weight:600;color:#94a3b8;margin:8px 0 3px}
+      .mf-box{border:1.5px solid var(--line);border-radius:9px;padding:9px 11px;font-size:13px;color:#334155;background:#fff}
+      .mf-radio{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#1e40af;background:var(--soft);border:1.5px solid #bfdbfe;border-radius:999px;padding:5px 11px;margin:0 4px 4px 0}
+      .mf-radio .dot{width:9px;height:9px;border-radius:50%;background:var(--primary)}
+      .mini-btn{margin-top:12px;width:100%;background:var(--primary);color:#fff;border:none;border-radius:10px;padding:11px;font-size:14px;font-weight:700}
+      .streak-card{background:linear-gradient(160deg,#fff7ed,#fff);border:1px solid #fed7aa;border-radius:14px;padding:16px;text-align:center}
+      .streak-card .fire{font-size:38px;line-height:1}
+      .streak-card .n{font-size:38px;font-weight:800;color:#ea580c;line-height:1.1}
+      .streak-card .sub{font-size:11px;color:#9a3412;font-weight:600}
+      .cal-card{margin-top:14px;border:1px solid var(--line);border-radius:14px;padding:14px}
+      .cal-card .ttl{font-size:12px;font-weight:700;color:#334155;margin-bottom:8px}
+      .cal28{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+      .cal28 i{aspect-ratio:1;border-radius:6px;background:#e2e8f0;display:block}
+      .cal28 i.on{background:var(--accent)}
+      .hstat{margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+      .hstat div{background:var(--soft);border-radius:11px;padding:11px;text-align:center}
+      .hstat .v{font-size:18px;font-weight:800;color:var(--primary)}
+      .hstat .l{font-size:10px;color:#94a3b8;font-weight:600;margin-top:2px}
+      /* section */
+      section{padding:70px 0}
+      .sec-head{text-align:center;max-width:680px;margin:0 auto 44px}
+      .sec-kicker{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--primary);background:var(--soft);padding:5px 14px;border-radius:999px;margin-bottom:14px}
+      .sec-head h2{font-size:30px;font-weight:800;letter-spacing:-.01em}
+      .sec-head p{margin-top:12px;color:var(--muted);font-size:15px}
+      .bg-soft{background:var(--bg)}
+      /* features */
+      .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+      .feat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;transition:transform .15s,box-shadow .2s}
+      .feat:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(15,23,42,.09)}
+      .feat .ic{width:54px;height:54px;border-radius:14px;background:var(--soft);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+      .feat .ic img{width:30px;height:30px}
+      .feat h3{font-size:17px;font-weight:800;margin-bottom:8px}
+      .feat p{font-size:14px;color:var(--muted)}
+      /* compare */
+      .cmp{overflow-x:auto}
+      table.cmp-t{width:100%;border-collapse:separate;border-spacing:0;min-width:680px;font-size:14px;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+      table.cmp-t th,table.cmp-t td{padding:14px 16px;text-align:center;border-bottom:1px solid var(--line)}
+      table.cmp-t thead th{background:#f1f5f9;font-weight:700;color:#475569;font-size:13px}
+      table.cmp-t thead th.us{background:var(--primary);color:#fff}
+      table.cmp-t td.row-h{text-align:left;font-weight:700;color:#334155;background:#fafbff}
+      table.cmp-t td.us{background:#eff6ff;font-weight:700;color:#1e40af}
+      table.cmp-t tr:last-child td{border-bottom:none}
+      .ck{color:var(--accent);font-weight:800}
+      .tri{color:#f59e0b;font-weight:700}
+      .cr{color:#cbd5e1;font-weight:700}
+      /* steps */
+      .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+      .step{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+      .step .num{position:absolute;top:-14px;left:22px;width:30px;height:30px;border-radius:50%;background:var(--primary);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(37,99,235,.3)}
+      .step .ic{width:46px;height:46px;border-radius:12px;background:#ecfdf5;display:flex;align-items:center;justify-content:center;margin:10px 0 12px}
+      .step .ic img{width:26px;height:26px}
+      .step h4{font-size:15px;font-weight:800;margin-bottom:6px}
+      .step p{font-size:13px;color:var(--muted)}
+      /* dashboard showcase */
+      .dash-show{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
+      .dash-show h2{font-size:28px;font-weight:800;margin-bottom:16px}
+      .dash-show ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+      .dash-show li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#334155}
+      .dash-show li b{color:var(--ink)}
+      .dash-show .chk{flex:0 0 24px;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800}
+      .dash-panel{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 20px 50px rgba(15,23,42,.1);padding:22px}
+      .dash-tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:18px}
+      .dtile{border:1px solid var(--line);border-radius:13px;padding:14px}
+      .dtile .ic{width:34px;height:34px;border-radius:9px;background:var(--soft);display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+      .dtile .ic img{width:20px;height:20px}
+      .dtile .v{font-size:22px;font-weight:800;color:var(--ink)}
+      .dtile .l{font-size:11px;color:#94a3b8;font-weight:600}
+      .dash-charts{display:grid;grid-template-columns:1.4fr 1fr;gap:16px}
+      .chart-box{border:1px solid var(--line);border-radius:13px;padding:14px}
+      .chart-box .ttl{font-size:12px;font-weight:700;color:#475569;margin-bottom:10px}
+      .ring{width:120px;height:120px;border-radius:50%;margin:6px auto;background:conic-gradient(var(--accent) 0% 90%,#e2e8f0 90% 100%);display:flex;align-items:center;justify-content:center}
+      .ring .inner{width:84px;height:84px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center}
+      .ring .inner b{font-size:24px;font-weight:800;color:var(--primary)}
+      .ring .inner span{font-size:10px;color:#94a3b8}
+      svg.spark{width:100%;height:90px}
+      /* faq */
+      .faq{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+      details.q{background:#fff;border:1px solid var(--line);border-radius:13px;padding:4px 18px}
+      details.q summary{cursor:pointer;font-weight:700;font-size:15px;padding:16px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;color:#1e293b}
+      details.q summary::-webkit-details-marker{display:none}
+      details.q summary::after{content:'＋';color:var(--primary);font-weight:800}
+      details.q[open] summary::after{content:'−'}
+      details.q p{padding:0 0 16px;font-size:14px;color:var(--muted)}
+      /* cta band */
+      .cta{position:relative;overflow:hidden;background:linear-gradient(120deg,var(--primary-d),var(--primary) 55%,#3b82f6);color:#fff;text-align:center;padding:64px 20px}
+      .cta .photos{position:absolute;inset:0;opacity:.18;display:flex;justify-content:space-between;align-items:center}
+      .cta .photos img{height:100%;width:200px;object-fit:cover}
+      .cta h2{position:relative;font-size:30px;font-weight:800;margin-bottom:10px}
+      .cta p{position:relative;opacity:.92;margin-bottom:26px}
+      .cta .btn-accent{position:relative}
+      /* gallery */
+      .gal{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+      .gal img{border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%}
+      /* footer */
+      footer{background:#0f172a;color:#cbd5e1;padding:46px 0 30px;font-size:13px}
+      .foot-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;border-bottom:1px solid #1e293b;padding-bottom:22px;margin-bottom:22px}
+      .foot-links{display:flex;gap:22px;flex-wrap:wrap}
+      .foot-links a:hover{color:#fff}
+      footer .brand{color:#fff}
+      @media(max-width:900px){
+        .nav-links{display:none}
+        .hero-in{grid-template-columns:1fr;gap:32px;padding:44px 0}
+        .hero h1{font-size:32px}
+        .feat-grid{grid-template-columns:1fr 1fr}
+        .steps{grid-template-columns:1fr 1fr}
+        .dash-show{grid-template-columns:1fr;gap:28px}
+        .gal{grid-template-columns:repeat(4,1fr)}
+      }
+      @media(max-width:560px){
+        .hero h1{font-size:27px}
+        .feat-grid,.steps,.dash-tiles,.hstat{grid-template-columns:1fr}
+        .hcard-top{grid-template-columns:1fr}
+        .dash-charts{grid-template-columns:1fr}
+        .sec-head h2{font-size:24px}
+        .gal{grid-template-columns:repeat(3,1fr)}
+      }
+    </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><span class="fire">🔥</span>語学学習ストリーク記録</a>
+    <nav class="nav-links">
+      <a href="#features">特徴</a>
+      <a href="#steps">使い方</a>
+      <a href="#dashboard">機能</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary" href="../">今すぐ記録開始</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-photo" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div>
+      <h1>毎日の語学学習を<br><span class="b">無料で記録・ストリーク管理</span><br>できる<span class="g">Webツール</span></h1>
+      <p class="lead">語学学習の毎日の記録・ストリーク管理が無料でできるWebツール。28日カレンダー・自動計算・データエクスポート対応。英語・中国語・韓国語など複数言語に対応しています。</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="../">今すぐ記録開始</a>
+        <a class="btn btn-ghost" href="#steps">使い方を見る</a>
+      </div>
+      <div class="trust">
+        <span><img src="../assets/icons/split/03-04.png" alt="">無料で使える</span>
+        <span><img src="../assets/icons/split/03-04.png" alt="">登録不要</span>
+        <span><img src="../assets/icons/split/02-01.png" alt="">スマホ対応</span>
+        <span><img src="../assets/icons/split/01-06.png" alt="">データはいつでもエクスポート</span>
+      </div>
+    </div>
+    <div class="hcard">
+      <div class="hcard-top">
+        <div class="mini-form">
+          <div class="ttl">学習を記録する</div>
+          <div class="mf-label">学習日</div>
+          <div class="mf-box">2024 / 05 / 18</div>
+          <div class="mf-label">学習言語</div>
+          <div style="margin-top:4px"><span class="mf-radio"><span class="dot"></span>英語</span><span class="mf-radio" style="background:#fff;color:#94a3b8;border-color:#e2e8f0"><span class="dot" style="background:#cbd5e1"></span>中国語</span></div>
+          <div class="mf-label">学習時間（分）</div>
+          <div class="mf-box">45</div>
+          <div class="mf-label">学習内容・一言メモ</div>
+          <div class="mf-box" style="color:#94a3b8">リスニング・単語復習…</div>
+          <div class="mini-btn">記録する</div>
+        </div>
+        <div>
+          <div class="streak-card">
+            <div class="fire">🔥</div>
+            <div class="n">28日</div>
+            <div class="sub">自己ベスト更新中 🎉</div>
+          </div>
+          <div class="cal-card">
+            <div class="ttl">28日カレンダー</div>
+            <div class="cal28" id="lp-cal"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hstat">
+        <div><div class="v">5h30m</div><div class="l">今週の学習</div></div>
+        <div><div class="v">18日</div><div class="l">今月の記録</div></div>
+        <div><div class="v">90%</div><div class="l">目標達成率</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap" style="margin-top:20px">
+  <ins class="adsbygoogle" style="display:block;min-height:90px" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>try{(adsbygoogle=window.adsbygoogle||[]).push({});}catch(e){}</script>
+</div>
+
+<!-- FEATURES -->
+<section id="features" class="bg-soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-kicker">FEATURES</span>
+      <h2>主な特徴</h2>
+      <p>続けたくなる仕組みと、振り返りやすい統計をまるごと無料で。</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat"><div class="ic"><img src="../assets/icons/split/01-02.png" alt=""></div><h3>マルチ言語並行トラッキング対応</h3><p>英語・中国語・韓国語など複数言語を同時に記録。言語ごとに学習時間と継続日数を管理できます。</p></div>
+      <div class="feat"><div class="ic"><img src="../assets/icons/split/01-03.png" alt=""></div><h3>リアルタイム統計ダッシュボード</h3><p>最長ストリーク・週別学習日数・目標達成率を自動集計。学習の成果がひと目でわかります。</p></div>
+      <div class="feat"><div class="ic"><img src="../assets/icons/split/01-04.png" alt=""></div><h3>目標設定と進捗の可視化</h3><p>週間目標を設定し、達成度を進捗バーとスコアで表示。今日やるべき量がすぐ分かります。</p></div>
+      <div class="feat"><div class="ic"><img src="../assets/icons/split/01-05.png" alt=""></div><h3>28日カレンダー表示</h3><p>直近28日の学習状況をカレンダーで色分け表示。連続記録の流れを視覚的に確認できます。</p></div>
+      <div class="feat"><div class="ic"><img src="../assets/icons/split/01-06.png" alt=""></div><h3>CSV / JSONエクスポート</h3><p>学習ログをCSV・JSON形式でいつでも書き出し。他ツールやバックアップにも活用できます。</p></div>
+      <div class="feat"><div class="ic"><img src="../assets/icons/split/01-07.png" alt=""></div><h3>無料・登録不要</h3><p>会員登録もアプリインストールも不要。ブラウザを開いてすぐに記録を始められます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-kicker">COMPARE</span>
+      <h2>他サービスとの比較</h2>
+      <p>記録・統計・エクスポートまで、無料でここまで揃うのが強みです。</p>
+    </div>
+    <div class="cmp">
+      <table class="cmp-t">
+        <thead>
+          <tr>
+            <th style="text-align:left">機能</th>
+            <th class="us">語学学習ストリーク記録</th>
+            <th>LangTrack</th>
+            <th>TrackMyLang</th>
+            <th>Duolingo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-h">複数言語の並行記録</td><td class="us"><span class="ck">✓</span> 完全対応</td><td><span class="tri">△</span> 一部対応</td><td><span class="ck">✓</span> 対応</td><td><span class="cr">✕</span> 単一中心</td></tr>
+          <tr><td class="row-h">見やすい統計・ダッシュボード</td><td class="us"><span class="ck">✓</span> 充実</td><td><span class="tri">△</span> 標準</td><td><span class="tri">△</span> 標準</td><td><span class="ck">✓</span> ゲーム型</td></tr>
+          <tr><td class="row-h">目標設定・進捗バー</td><td class="us"><span class="ck">✓</span> リッチUI対応</td><td><span class="ck">✓</span> 対応</td><td><span class="tri">△</span> 簡易</td><td><span class="ck">✓</span> 対応</td></tr>
+          <tr><td class="row-h">カレンダー一覧表示</td><td class="us"><span class="ck">✓</span> 28日表示</td><td><span class="tri">△</span> 月のみ</td><td><span class="cr">✕</span> なし</td><td><span class="tri">△</span> ストリークのみ</td></tr>
+          <tr><td class="row-h">CSV / JSONエクスポート</td><td class="us"><span class="ck">✓</span> 対応</td><td><span class="cr">✕</span> 非対応</td><td><span class="tri">△</span> CSVのみ</td><td><span class="cr">✕</span> 非対応</td></tr>
+          <tr><td class="row-h">料金・登録</td><td class="us"><span class="ck">✓</span> 無料・登録不要</td><td>無料プラン有</td><td>無料プラン有</td><td>無料（広告/課金）</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section id="steps" class="bg-soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-kicker">HOW TO</span>
+      <h2>使い方はカンタン！4ステップ</h2>
+      <p>入力して記録するだけ。あとはカレンダーと統計が自動で育っていきます。</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div class="ic"><img src="../assets/icons/split/02-06.png" alt=""></div><h4>項目を入力</h4><p>学習日・言語・時間・メモを入力フォームに入れるだけ。</p></div>
+      <div class="step"><div class="num">2</div><div class="ic"><img src="../assets/icons/split/03-04.png" alt=""></div><h4>記録する</h4><p>「記録する」をタップしてデータをブラウザに保存。</p></div>
+      <div class="step"><div class="num">3</div><div class="ic"><img src="../assets/icons/split/01-05.png" alt=""></div><h4>カレンダーで継続確認</h4><p>28日カレンダーで継続状況をひと目でチェック。</p></div>
+      <div class="step"><div class="num">4</div><div class="ic"><img src="../assets/icons/split/01-03.png" alt=""></div><h4>ログと統計を振り返る</h4><p>統計ダッシュボードで学習量の推移を振り返り、次の目標へ。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD SHOWCASE -->
+<section id="dashboard">
+  <div class="wrap dash-show">
+    <div>
+      <span class="sec-kicker">DASHBOARD</span>
+      <h2>学習の成果が<br>ひと目でわかるダッシュボード</h2>
+      <p style="color:var(--muted);margin-bottom:22px">ストリーク学習時間、目標達成率を自動で集計。学習のモチベーションを高めるデータが揃います。</p>
+      <ul>
+        <li><span class="chk">✓</span><span><b>最長ストリーク</b>を自動でカウント</span></li>
+        <li><span class="chk">✓</span><span><b>週別学習日数</b>と目標達成率を可視化</span></li>
+        <li><span class="chk">✓</span><span><b>目標達成率</b>をドーナツチャートで表示</span></li>
+        <li><span class="chk">✓</span><span><b>学習量の推移</b>を折れ線・棒グラフで確認</span></li>
+      </ul>
+    </div>
+    <div class="dash-panel">
+      <div class="dash-tiles">
+        <div class="dtile"><div class="ic"><img src="../assets/icons/split/01-01.png" alt=""></div><div class="v">28日</div><div class="l">連続ストリーク</div></div>
+        <div class="dtile"><div class="ic"><img src="../assets/icons/split/01-05.png" alt=""></div><div class="v">5 / 7日</div><div class="l">週間学習目標</div></div>
+        <div class="dtile"><div class="ic"><img src="../assets/icons/split/01-04.png" alt=""></div><div class="v">90%</div><div class="l">目標達成率</div></div>
+        <div class="dtile"><div class="ic"><img src="../assets/icons/split/02-07.png" alt=""></div><div class="v">18h45m</div><div class="l">今月の学習時間</div></div>
+      </div>
+      <div class="dash-charts">
+        <div class="chart-box">
+          <div class="ttl">学習時間推移（月）</div>
+          <svg class="spark" viewBox="0 0 300 90" preserveAspectRatio="none">
+            <polyline fill="none" stroke="#2563EB" stroke-width="3" points="0,70 40,55 80,62 120,40 160,48 200,28 240,35 300,18"/>
+            <polyline fill="rgba(37,99,235,.08)" stroke="none" points="0,70 40,55 80,62 120,40 160,48 200,28 240,35 300,18 300,90 0,90"/>
+          </svg>
+        </div>
+        <div class="chart-box">
+          <div class="ttl">言語別の学習時間</div>
+          <div class="ring"><div class="inner"><b>90%</b><span>達成</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MORE FEATURES -->
+<section class="bg-soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-kicker">EXTRA</span>
+      <h2>さらに便利な機能</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat"><div class="ic"><img src="../assets/icons/split/01-08.png" alt=""></div><h3>SNSシェア機能</h3><p>ストリーク達成時の自動投稿テンプレートでSNSにシェア。仲間と一緒にモチベーションUP。</p></div>
+      <div class="feat"><div class="ic"><img src="../assets/icons/split/02-01.png" alt=""></div><h3>モバイルタッチフレンドリーUI</h3><p>スマホでもタップしやすいボタンサイズと入力UI。移動中でもサッと記録できます。</p></div>
+      <div class="feat"><div class="ic"><img src="../assets/icons/split/02-02.png" alt=""></div><h3>直前記録の複製機能</h3><p>前回と同じ学習内容はワンタップで複製。毎日の入力の手間を大きく減らせます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-kicker">SCENE</span>
+      <h2>こんな学習シーンで</h2>
+      <p>通勤中・休憩中・自宅での学習まで。毎日の積み重ねを記録に残しましょう。</p>
+    </div>
+    <div class="gal">
+      <img src="../assets/photos/photo_02.jpg" alt="語学学習シーン" loading="lazy">
+      <img src="../assets/photos/photo_03.jpg" alt="語学学習シーン" loading="lazy">
+      <img src="../assets/photos/photo_04.jpg" alt="語学学習シーン" loading="lazy">
+      <img src="../assets/photos/photo_05.jpg" alt="語学学習シーン" loading="lazy">
+      <img src="../assets/photos/photo_07.jpg" alt="語学学習シーン" loading="lazy">
+      <img src="../assets/photos/photo_08.jpg" alt="語学学習シーン" loading="lazy">
+      <img src="../assets/photos/photo_09.jpg" alt="語学学習シーン" loading="lazy">
+      <img src="../assets/photos/photo_10.jpg" alt="語学学習シーン" loading="lazy">
+      <img src="../assets/photos/photo_11.jpg" alt="語学学習シーン" loading="lazy">
+      <img src="../assets/photos/photo_12.jpg" alt="語学学習シーン" loading="lazy">
+      <img src="../assets/photos/photo_13.jpg" alt="語学学習シーン" loading="lazy">
+      <img src="../assets/photos/photo_14.jpg" alt="語学学習シーン" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="bg-soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-kicker">FAQ</span>
+      <h2>よくある質問</h2>
+    </div>
+    <div class="faq">
+      <details class="q" open><summary>無料で使えますか？</summary><p>はい、すべての機能を無料でご利用いただけます。登録やログインも不要です。</p></details>
+      <details class="q"><summary>データはどこに保存されますか？</summary><p>ご利用のブラウザのローカルストレージに保存されます。サーバーには送信されないため、安心してご利用いただけます。必要に応じてCSV・JSONでエクスポートできます。</p></details>
+      <details class="q"><summary>スマートフォンでも使えますか？</summary><p>はい、スマートフォン・タブレット・PCすべてに対応しています。タッチ操作に最適化したUIで快適に記録できます。</p></details>
+      <details class="q"><summary>複数の言語を同時に記録できますか？</summary><p>はい、英語・中国語・韓国語など複数言語を並行して記録でき、言語ごとに学習時間・継続日数を集計します。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="photos" aria-hidden="true">
+    <img src="../assets/photos/photo_18.jpg" alt="">
+    <img src="../assets/photos/photo_20.jpg" alt="">
+  </div>
+  <h2>今日から学習を続ける仕組みをつくろう</h2>
+  <p>小さな積み重ねが、大きな成果に。今すぐ無料で記録を始めましょう。</p>
+  <a class="btn btn-accent" href="../">今すぐ記録開始 →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="#top"><span class="fire">🔥</span>語学学習ストリーク記録</a>
+      <nav class="foot-links">
+        <a href="#features">特徴</a>
+        <a href="#steps">使い方</a>
+        <a href="#dashboard">機能</a>
+        <a href="#faq">FAQ</a>
+        <a href="../privacy-policy.html">プライバシーポリシー</a>
+        <a href="../terms.html">利用規約</a>
+        <a href="../contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <p>運営：<a href="https://appadaycreator.com/" style="color:#93c5fd">AppADayCreator</a> / Tech&amp;Brace ｜ © 2026 AppADayCreator. All services are free.</p>
+    <p style="margin-top:6px;opacity:.6;font-size:11px">本サービスはアフィリエイト広告を掲載しています（A8.net/Amazon）。</p>
+  </div>
+</footer>
+
+<script>
+  // ヒーローの28日カレンダー（装飾）— 学習済みパターンを散りばめる
+  (function(){
+    var c=document.getElementById('lp-cal'); if(!c) return;
+    var on=[0,1,2,3,5,6,7,8,9,10,12,13,14,15,16,18,19,20,21,22,23,25,26,27];
+    var h=''; for(var i=0;i<28;i++){ h+='<i class="'+(on.indexOf(i)>=0?'on':'')+'"></i>'; }
+    c.innerHTML=h;
+  })();
+</script>
+</body>
+</html>
