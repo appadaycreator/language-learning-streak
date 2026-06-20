@@ -68,7 +68,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
       .trust img{width:18px;height:18px}
       /* hero card */
       .hcard{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 60px rgba(15,23,42,.12);padding:18px}
-      .hcard-top{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+      .hcard-top{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}
       .mini-form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
       .mini-form .ttl{font-size:13px;font-weight:700;color:#334155;margin-bottom:10px}
       .mf-label{font-size:11px;font-weight:600;color:#94a3b8;margin:8px 0 3px}
@@ -76,27 +76,18 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
       .mf-radio{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#1e40af;background:var(--soft);border:1.5px solid #bfdbfe;border-radius:999px;padding:5px 11px;margin:0 4px 4px 0}
       .mf-radio .dot{width:9px;height:9px;border-radius:50%;background:var(--primary)}
       .mini-btn{margin-top:12px;width:100%;background:var(--primary);color:#fff;border:none;border-radius:10px;padding:11px;font-size:14px;font-weight:700}
-      .streak-card{position:relative;overflow:hidden;background:linear-gradient(155deg,#fff7ed,#ffedd5);border:1px solid #fed7aa;border-radius:14px;padding:18px 16px;text-align:center;box-shadow:0 8px 22px rgba(234,88,12,.12)}
-      .streak-card::after{content:'';position:absolute;top:-30px;right:-30px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(251,146,60,.25),transparent 70%)}
-      .streak-card .fire{font-size:42px;line-height:1}
-      .streak-card .n{font-size:46px;font-weight:800;color:#ea580c;line-height:1.05;letter-spacing:-.02em}
-      .streak-card .n small{font-size:18px;font-weight:800}
-      .streak-card .sub{font-size:11px;color:#9a3412;font-weight:700;margin-top:2px}
-      .cal-card{margin-top:14px;border:1px solid var(--line);border-radius:14px;padding:14px;background:linear-gradient(180deg,#f0fdf4,#fff)}
-      .cal-card .ttl{font-size:12px;font-weight:700;color:#334155;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
-      .cal-card .ttl em{font-style:normal;font-size:10px;font-weight:700;color:#059669;background:#dcfce7;padding:2px 7px;border-radius:999px}
-      .cal28{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
-      .cal28 i{aspect-ratio:1;border-radius:4px;background:#e8edf3;display:block}
+      .streak-card{background:linear-gradient(160deg,#fff7ed,#fff);border:1px solid #fed7aa;border-radius:14px;padding:16px;text-align:center}
+      .streak-card .fire{font-size:38px;line-height:1}
+      .streak-card .n{font-size:38px;font-weight:800;color:#ea580c;line-height:1.1}
+      .streak-card .sub{font-size:11px;color:#9a3412;font-weight:600}
+      .cal-card{margin-top:14px;border:1px solid var(--line);border-radius:14px;padding:14px}
+      .cal-card .ttl{font-size:12px;font-weight:700;color:#334155;margin-bottom:8px}
+      .cal28{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+      .cal28 i{aspect-ratio:1;border-radius:6px;background:#e2e8f0;display:block}
       .cal28 i.on{background:var(--accent)}
-      .cal28 i.l1{background:#bbf7d0}
-      .cal28 i.l2{background:#6ee7b7}
-      .cal28 i.l3{background:#10b981}
-      .cal28 i.l4{background:#059669}
-      .cal-legend{display:flex;align-items:center;justify-content:flex-end;gap:4px;margin-top:8px;font-size:9px;color:#94a3b8;font-weight:600}
-      .cal-legend i{width:9px;height:9px;border-radius:3px;display:inline-block}
       .hstat{margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-      .hstat div{background:linear-gradient(160deg,#eff6ff,#fff);border:1px solid #e0ecff;border-radius:11px;padding:12px 8px;text-align:center}
-      .hstat .v{font-size:19px;font-weight:800;color:var(--primary)}
+      .hstat div{background:var(--soft);border-radius:11px;padding:11px;text-align:center}
+      .hstat .v{font-size:18px;font-weight:800;color:var(--primary)}
       .hstat .l{font-size:10px;color:#94a3b8;font-weight:600;margin-top:2px}
       /* section */
       section{padding:70px 0}
@@ -147,22 +138,9 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
       .dtile .ic img{width:20px;height:20px}
       .dtile .v{font-size:22px;font-weight:800;color:var(--ink)}
       .dtile .l{font-size:11px;color:#94a3b8;font-weight:600}
-      .dash-charts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-      .chart-box{border:1px solid var(--line);border-radius:13px;padding:14px;background:linear-gradient(180deg,#fbfdff,#fff)}
-      .chart-box.wide{grid-column:1 / -1}
-      .chart-box .ttl{font-size:12px;font-weight:700;color:#475569;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
-      .chart-box .ttl em{font-style:normal;font-size:10px;color:#10b981;font-weight:800}
-      /* bar chart */
-      .bars{display:flex;align-items:flex-end;gap:7px;height:90px;padding-top:14px;margin-bottom:16px}
-      .bars div{flex:1;border-radius:5px 5px 0 0;background:linear-gradient(180deg,#60a5fa,#2563EB);position:relative}
-      .bars div::after{content:attr(data-d);position:absolute;bottom:-16px;left:0;right:0;text-align:center;font-size:9px;color:#94a3b8;font-weight:600}
-      .bars div span{position:absolute;top:-15px;left:0;right:0;text-align:center;font-size:9px;color:#2563EB;font-weight:800}
-      .lang-bars{display:flex;flex-direction:column;gap:9px}
-      .lang-bars .lb{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;color:#475569}
-      .lang-bars .lb i{font-style:normal;width:38px;flex:0 0 38px}
-      .lang-bars .track{flex:1;height:9px;border-radius:999px;background:#eef2f7;overflow:hidden}
-      .lang-bars .track b{display:block;height:100%;border-radius:999px}
-      .lang-bars .pct{flex:0 0 30px;text-align:right;color:#1e40af;font-weight:800}
+      .dash-charts{display:grid;grid-template-columns:1.4fr 1fr;gap:16px}
+      .chart-box{border:1px solid var(--line);border-radius:13px;padding:14px}
+      .chart-box .ttl{font-size:12px;font-weight:700;color:#475569;margin-bottom:10px}
       .ring{width:120px;height:120px;border-radius:50%;margin:6px auto;background:conic-gradient(var(--accent) 0% 90%,#e2e8f0 90% 100%);display:flex;align-items:center;justify-content:center}
       .ring .inner{width:84px;height:84px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center}
       .ring .inner b{font-size:24px;font-weight:800;color:var(--primary)}
@@ -263,13 +241,12 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         <div>
           <div class="streak-card">
             <div class="fire">🔥</div>
-            <div class="n">28<small>日</small></div>
+            <div class="n">28日</div>
             <div class="sub">自己ベスト更新中 🎉</div>
           </div>
           <div class="cal-card">
-            <div class="ttl">学習ヒートマップ <em>直近8週</em></div>
+            <div class="ttl">28日カレンダー</div>
             <div class="cal28" id="lp-cal"></div>
-            <div class="cal-legend">少<i style="background:#e8edf3"></i><i style="background:#bbf7d0"></i><i style="background:#6ee7b7"></i><i style="background:#10b981"></i><i style="background:#059669"></i>多</div>
           </div>
         </div>
       </div>
@@ -377,38 +354,16 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         <div class="dtile"><div class="ic"><img src="../assets/icons/split/02-07.png" alt=""></div><div class="v">18h45m</div><div class="l">今月の学習時間</div></div>
       </div>
       <div class="dash-charts">
-        <div class="chart-box wide">
-          <div class="ttl">学習時間の推移 <em>+24% ↑</em></div>
+        <div class="chart-box">
+          <div class="ttl">学習時間推移（月）</div>
           <svg class="spark" viewBox="0 0 300 90" preserveAspectRatio="none">
-            <defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(37,99,235,.22)"/><stop offset="1" stop-color="rgba(37,99,235,0)"/></linearGradient></defs>
-            <polyline fill="url(#lg)" stroke="none" points="0,70 40,55 80,62 120,40 160,48 200,28 240,35 300,18 300,90 0,90"/>
-            <polyline fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" points="0,70 40,55 80,62 120,40 160,48 200,28 240,35 300,18"/>
-            <circle cx="200" cy="28" r="3.5" fill="#2563EB"/><circle cx="300" cy="18" r="4" fill="#10b981"/>
+            <polyline fill="none" stroke="#2563EB" stroke-width="3" points="0,70 40,55 80,62 120,40 160,48 200,28 240,35 300,18"/>
+            <polyline fill="rgba(37,99,235,.08)" stroke="none" points="0,70 40,55 80,62 120,40 160,48 200,28 240,35 300,18 300,90 0,90"/>
           </svg>
         </div>
         <div class="chart-box">
-          <div class="ttl">曜日別の学習日数</div>
-          <div class="bars">
-            <div style="height:46%" data-d="月"><span>3</span></div>
-            <div style="height:62%" data-d="火"><span>4</span></div>
-            <div style="height:38%" data-d="水"><span>2</span></div>
-            <div style="height:78%" data-d="木"><span>5</span></div>
-            <div style="height:62%" data-d="金"><span>4</span></div>
-            <div style="height:92%" data-d="土"><span>6</span></div>
-            <div style="height:78%" data-d="日"><span>5</span></div>
-          </div>
-        </div>
-        <div class="chart-box">
-          <div class="ttl">目標達成率</div>
-          <div class="ring" style="width:96px;height:96px"><div class="inner" style="width:66px;height:66px"><b style="font-size:20px">90%</b><span>達成</span></div></div>
-        </div>
-        <div class="chart-box wide">
-          <div class="ttl">言語別の学習時間の割合</div>
-          <div class="lang-bars">
-            <div class="lb"><i>英語</i><div class="track"><b style="width:55%;background:linear-gradient(90deg,#2563EB,#60a5fa)"></b></div><span class="pct">55%</span></div>
-            <div class="lb"><i>中国語</i><div class="track"><b style="width:28%;background:linear-gradient(90deg,#10b981,#34d399)"></b></div><span class="pct">28%</span></div>
-            <div class="lb"><i>韓国語</i><div class="track"><b style="width:17%;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></b></div><span class="pct">17%</span></div>
-          </div>
+          <div class="ttl">言語別の学習時間</div>
+          <div class="ring"><div class="inner"><b>90%</b><span>達成</span></div></div>
         </div>
       </div>
     </div>
@@ -503,12 +458,11 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 </footer>
 
 <script>
-  // ヒーローの学習ヒートマップ（装飾）— 直近8週56日を強度別に表示
+  // ヒーローの28日カレンダー（装飾）— 学習済みパターンを散りばめる
   (function(){
     var c=document.getElementById('lp-cal'); if(!c) return;
-    // 0=未学習,1〜4=学習強度。手前ほど継続が濃くなるパターン
-    var lv=[0,1,2,1,0,3,2, 1,2,3,2,4,3,1, 0,2,3,4,3,2,4, 2,3,2,4,3,4,3, 3,4,2,3,4,4,3, 2,4,3,4,4,3,4, 4,3,4,2,4,4,3, 3,4,4,3,4,4,4];
-    var h=''; for(var i=0;i<lv.length;i++){ h+='<i class="'+(lv[i]?'l'+lv[i]:'')+'"></i>'; }
+    var on=[0,1,2,3,5,6,7,8,9,10,12,13,14,15,16,18,19,20,21,22,23,25,26,27];
+    var h=''; for(var i=0;i<28;i++){ h+='<i class="'+(on.indexOf(i)>=0?'on':'')+'"></i>'; }
     c.innerHTML=h;
   })();
 </script>
